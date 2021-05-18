@@ -1,4 +1,5 @@
 import 'package:day12_login/Login/login_screen.dart';
+import 'package:day12_login/Signup/signup_screen.dart';
 import 'package:day12_login/Welcome/components/background.dart';
 import 'package:day12_login/constants.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,16 @@ class Body extends StatelessWidget {
               text: "SIGN UP",
               color: kPrimaryLightColor,
               textColor: Colors.black,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignupScreen();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),

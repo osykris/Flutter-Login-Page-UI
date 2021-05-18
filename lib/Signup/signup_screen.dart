@@ -1,11 +1,9 @@
 import 'package:day12_login/Animation/FadeAnimation.dart';
-import 'package:day12_login/Login/or_divider.dart';
-import 'package:day12_login/Login/social_icon.dart';
-import 'package:day12_login/Signup/signup_screen.dart';
+import 'package:day12_login/Login/login_screen.dart';
 import 'package:day12_login/components/already_have_an_account_acheck.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -70,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                               margin: EdgeInsets.only(top: 50),
                               child: Center(
                                 child: Text(
-                                  "Login",
+                                  "Signup",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 40,
@@ -101,6 +99,20 @@ class LoginScreen extends StatelessWidget {
                                 ]),
                             child: Column(
                               children: <Widget>[
+                                 Container(
+                                  padding: EdgeInsets.all(8.0),
+                                  decoration: BoxDecoration(
+                                      border: Border(
+                                          bottom: BorderSide(
+                                              color: Colors.grey[100]))),
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        hintText: "Full Name",
+                                        hintStyle:
+                                            TextStyle(color: Colors.grey[400])),
+                                  ),
+                                ),
                                 Container(
                                   padding: EdgeInsets.all(8.0),
                                   decoration: BoxDecoration(
@@ -110,7 +122,7 @@ class LoginScreen extends StatelessWidget {
                                   child: TextField(
                                     decoration: InputDecoration(
                                         border: InputBorder.none,
-                                        hintText: "Email or Phone number",
+                                        hintText: "Email",
                                         hintStyle:
                                             TextStyle(color: Colors.grey[400])),
                                   ),
@@ -152,30 +164,17 @@ class LoginScreen extends StatelessWidget {
                           )),
                       SizedBox(height: size.height * 0.03),
                       AlreadyHaveAnAccountCheck(
+                         login: false,
                         press: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return SignupScreen();
+                                return LoginScreen();
                               },
                             ),
                           );
                         },
-                      ),
-                      OrDivider(),
-                      Container(
-                        padding: EdgeInsets.all(4),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            SocalIcon(
-                              iconSrc: "assets/icons/google-plus.svg",
-                              press: () {},
-                            ),
-                            Text('Sign In with GOOGLE'),
-                          ],
-                        ),
                       ),
                     ],
                   ),
