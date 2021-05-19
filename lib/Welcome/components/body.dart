@@ -1,3 +1,4 @@
+import 'package:day12_login/Dashboard/first_page.dart';
 import 'package:day12_login/Login/login_screen.dart';
 import 'package:day12_login/Signup/signup_screen.dart';
 import 'package:day12_login/Welcome/components/background.dart';
@@ -33,7 +34,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return FirstPage();
                     },
                   ),
                 );
