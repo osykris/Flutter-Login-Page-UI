@@ -9,7 +9,7 @@ class FirstPage extends StatefulWidget {
 }
 
 class FirstPageState extends State<FirstPage> {
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff392850),
@@ -47,13 +47,21 @@ class FirstPageState extends State<FirstPage> {
                     ),
                   ],
                 ),
+                IconButton(
+                  alignment: Alignment.topCenter,
+                  icon: Image.asset(
+                    "assets/logout.png",
+                    width: 24, color: Colors.white,
+                  ),
+                  onPressed: () {},
+                )
               ],
             ),
           ),
           SizedBox(
             height: 40,
           ),
-         GridDashboard()
+          GridDashboard()
         ],
       ),
     );
