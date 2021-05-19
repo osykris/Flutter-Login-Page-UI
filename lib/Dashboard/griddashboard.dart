@@ -1,4 +1,5 @@
 import 'package:day12_login/Calculation/calculate.dart';
+import 'package:day12_login/Money/pages/home.dart';
 import 'package:day12_login/PrayTime/praytime_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -71,7 +72,11 @@ class GridDashboard extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () { Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Money()),
+                    );},
                   child: Card(
                     color: Color(color),
                     shape: RoundedRectangleBorder(
@@ -90,7 +95,7 @@ class GridDashboard extends StatelessWidget {
                           height: 14,
                         ),
                         Text(
-                          "Money Entry",
+                          "My Money",
                           style: GoogleFonts.openSans(
                               textStyle: TextStyle(
                                   color: Colors.white,
