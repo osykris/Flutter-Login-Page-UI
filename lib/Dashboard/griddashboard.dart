@@ -1,4 +1,5 @@
 import 'package:day12_login/Calculation/calculate.dart';
+import 'package:day12_login/PrayTime/praytime_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,12 @@ class GridDashboard extends StatelessWidget {
               mainAxisSpacing: 18,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PrayTimeScreen()),
+                    );},
                   child: Card(
                     color: Color(color),
                     shape: RoundedRectangleBorder(
@@ -39,7 +45,7 @@ class GridDashboard extends StatelessWidget {
                           height: 14,
                         ),
                         Text(
-                          "Calendar",
+                          "Prayer Times",
                           style: GoogleFonts.openSans(
                               textStyle: TextStyle(
                                   color: Colors.white,
@@ -50,7 +56,7 @@ class GridDashboard extends StatelessWidget {
                           height: 8,
                         ),
                         Text(
-                          "March, Wednesday",
+                          "Subuh until Isha'",
                           style: GoogleFonts.openSans(
                               textStyle: TextStyle(
                                   color: Colors.white38,
