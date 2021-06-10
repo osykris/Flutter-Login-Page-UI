@@ -51,7 +51,7 @@ class FirstPageState extends State<FirstPage> {
                   alignment: Alignment.topCenter,
                   icon: Image.asset(
                     "assets/logout.png",
-                    width: 24, color: Colors.white,
+                    width: 28, color: Colors.white,
                   ),
                   onPressed: () {},
                 )

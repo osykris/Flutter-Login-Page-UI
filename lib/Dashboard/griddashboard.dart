@@ -22,56 +22,6 @@ class GridDashboard extends StatelessWidget {
               mainAxisSpacing: 18,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PrayTimeScreen()),
-                    );},
-                  child: Card(
-                    color: Color(color),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    elevation: 4,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Expanded(
-                          child: Container(
-                            width: 50,
-                            child: Image.asset('assets/calendar.png'),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 14,
-                        ),
-                        Text(
-                          "Prayer Times",
-                          style: GoogleFonts.openSans(
-                              textStyle: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600)),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          "Subuh until Isha'",
-                          style: GoogleFonts.openSans(
-                              textStyle: TextStyle(
-                                  color: Colors.white38,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w600)),
-                        ),
-                        SizedBox(
-                          height: 14,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                GestureDetector(
                   onTap: () { Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -158,6 +108,56 @@ class GridDashboard extends StatelessWidget {
                         ),
                         Text(
                           "Count Transactions",
+                          style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  color: Colors.white38,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w600)),
+                        ),
+                        SizedBox(
+                          height: 14,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PrayTimeScreen()),
+                    );},
+                  child: Card(
+                    color: Color(color),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    elevation: 4,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            width: 50,
+                            child: Image.asset('assets/calendar.png'),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 14,
+                        ),
+                        Text(
+                          "Prayer Times",
+                          style: GoogleFonts.openSans(
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600)),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          "Subuh until Isha'",
                           style: GoogleFonts.openSans(
                               textStyle: TextStyle(
                                   color: Colors.white38,
